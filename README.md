@@ -1,7 +1,7 @@
 # 🚀 OpenVPN Access Server (Cracked Edition)
 
 **Контейнер для быстрого развёртывания OpenVPN Access Server с предустановленной лицензией**  
-> Основан на образе [`ghcr.io/alexflyme/openvpn-as-cracked-cracked:latest`]
+> Основан на образе [`ghcr.io/alexflyme/openvpn-as-cracked:latest`]
 
 ---
 
@@ -38,7 +38,7 @@ docker run -d \
   -p 943:943 -p 443:443 -p 1194:1194/udp \
   -v ./data:/openvpn \
   --restart=unless-stopped \
-  ghcr.io/alexflyme/openvpn-as-cracked-cracked:latest
+  ghcr.io/alexflyme/openvpn-as-cracked:latest
 ```
 
 ---
@@ -106,7 +106,7 @@ docker compose logs openvpn-as-cracked 2>&1 | grep -i password
 | `docker start openvpn-as-cracked` | Запустить контейнер снова |
 | `docker restart openvpn-as-cracked` | Перезапустить контейнер |
 | `docker rm -f openvpn-as-cracked` | Удалить контейнер |
-| `docker pull ghcr.io/alexflyme/openvpn-as-cracked-cracked:latest` | Скачать обновлённый образ |
+| `docker pull ghcr.io/alexflyme/openvpn-as-cracked:latest` | Скачать обновлённый образ |
 
 ---
 
@@ -119,7 +119,7 @@ version: '3.8'
 
 services:
   openvpn-as-cracked:
-    image: ghcr.io/alexflyme/openvpn-as-cracked-cracked:latest
+    image: ghcr.io/alexflyme/openvpn-as-cracked:latest
     container_name: openvpn-as-cracked
     cap_add:
       - NET_ADMIN
@@ -154,7 +154,7 @@ docker compose down
 **1. Скачать новый образ:**
 
 ```bash
-docker pull ghcr.io/alexflyme/openvpn-as-cracked-cracked:latest
+docker pull ghcr.io/alexflyme/openvpn-as-cracked:latest
 ```
 
 **2. Остановить и удалить старый контейнер:**
@@ -239,6 +239,6 @@ sudo chown $(id -u):$(id -g) ./data
 ## ❤️ Автор
 
 **AlexFlyme**  
-📦 GitHub Packages: [ghcr.io/alexflyme/openvpn-as-cracked-cracked](https://ghcr.io/alexflyme/openvpn-as-cracked-cracked)
+📦 GitHub Packages: [ghcr.io/alexflyme/openvpn-as-cracked](https://ghcr.io/alexflyme/openvpn-as-cracked)
 
 ---
