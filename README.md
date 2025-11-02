@@ -1,7 +1,7 @@
 # 🚀 OpenVPN Access Server (Cracked Edition)
 
 **Контейнер для быстрого развёртывания OpenVPN Access Server с предустановленной лицензией**  
-> Основан на образе [`ghcr.io/alexflyme/openvpn-as-cracked:latest`]
+> Основан на образе [`ghcr.io/alexflyme/openvpn-as-cracked-cracked:latest`]
 
 ---
 
@@ -32,13 +32,13 @@
 
 ```bash
 docker run -d \
-  --name=openvpn-as \
+  --name=openvpn-as-cracked \
   --device /dev/net/tun \
   --cap-add=MKNOD --cap-add=NET_ADMIN \
   -p 943:943 -p 443:443 -p 1194:1194/udp \
   -v ./data:/openvpn \
   --restart=unless-stopped \
-  ghcr.io/alexflyme/openvpn-as-cracked:latest
+  ghcr.io/alexflyme/openvpn-as-cracked-cracked:latest
 ```
 
 ---
@@ -85,13 +85,13 @@ Password: <указывается в логах контейнера или пр
 Чтобы просмотреть логи контейнера и, при необходимости, найти автоматически сгенерированный пароль:
 
 ```bash
-docker logs openvpn-as 2>&1 | grep -i password
+docker logs openvpn-as-cracked 2>&1 | grep -i password
 ```
 
 Если используете **docker-compose**:
 
 ```bash
-docker compose logs openvpn-as 2>&1 | grep -i password
+docker compose logs openvpn-as-cracked 2>&1 | grep -i password
 ```
 
 ---
@@ -101,12 +101,12 @@ docker compose logs openvpn-as 2>&1 | grep -i password
 | Команда | Действие |
 |----------|-----------|
 | `docker ps` | Проверить, работает ли контейнер |
-| `docker logs openvpn-as` | Просмотреть логи контейнера |
-| `docker stop openvpn-as` | Остановить контейнер |
-| `docker start openvpn-as` | Запустить контейнер снова |
-| `docker restart openvpn-as` | Перезапустить контейнер |
-| `docker rm -f openvpn-as` | Удалить контейнер |
-| `docker pull ghcr.io/alexflyme/openvpn-as-cracked:latest` | Скачать обновлённый образ |
+| `docker logs openvpn-as-cracked` | Просмотреть логи контейнера |
+| `docker stop openvpn-as-cracked` | Остановить контейнер |
+| `docker start openvpn-as-cracked` | Запустить контейнер снова |
+| `docker restart openvpn-as-cracked` | Перезапустить контейнер |
+| `docker rm -f openvpn-as-cracked` | Удалить контейнер |
+| `docker pull ghcr.io/alexflyme/openvpn-as-cracked-cracked:latest` | Скачать обновлённый образ |
 
 ---
 
@@ -118,9 +118,9 @@ docker compose logs openvpn-as 2>&1 | grep -i password
 version: '3.8'
 
 services:
-  openvpn-as:
-    image: ghcr.io/alexflyme/openvpn-as-cracked:latest
-    container_name: openvpn-as
+  openvpn-as-cracked:
+    image: ghcr.io/alexflyme/openvpn-as-cracked-cracked:latest
+    container_name: openvpn-as-cracked
     cap_add:
       - NET_ADMIN
       - MKNOD
@@ -154,14 +154,14 @@ docker compose down
 **1. Скачать новый образ:**
 
 ```bash
-docker pull ghcr.io/alexflyme/openvpn-as-cracked:latest
+docker pull ghcr.io/alexflyme/openvpn-as-cracked-cracked:latest
 ```
 
 **2. Остановить и удалить старый контейнер:**
 
 ```bash
-docker stop openvpn-as
-docker rm openvpn-as
+docker stop openvpn-as-cracked
+docker rm openvpn-as-cracked
 ```
 
 **3. Запустить новый контейнер (командой `docker run` или `docker compose up -d`):**
@@ -239,6 +239,6 @@ sudo chown $(id -u):$(id -g) ./data
 ## ❤️ Автор
 
 **AlexFlyme**  
-📦 GitHub Packages: [ghcr.io/alexflyme/openvpn-as-cracked](https://ghcr.io/alexflyme/openvpn-as-cracked)
+📦 GitHub Packages: [ghcr.io/alexflyme/openvpn-as-cracked-cracked](https://ghcr.io/alexflyme/openvpn-as-cracked-cracked)
 
 ---
