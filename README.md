@@ -1,7 +1,7 @@
 # 🚀 OpenVPN Access Server (Cracked Edition) V.3.0.1
 
 **Контейнер для быстрого развёртывания OpenVPN Access Server с предустановленной лицензией**  
-> Основан на образе [`ghcr.io/alexflyme/openvpn-as-cracked:latest`]
+> Основан на образе [`openvpn/openvpn-as:latest`]
 
 ---
 
